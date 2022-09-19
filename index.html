@@ -33,52 +33,78 @@
 
         #subText2 {
             border: 1px solid #4d4d4d;
+            padding: 5px;
+            width: 300px;
         }
 
         p {
             letter-spacing: 3px;
         }
+
+        #myTable {
+            border: 1px solid #c2c2c2;
+        }
+
+        tr, td, th {
+            border: 1px solid #c2c2c2;
+            padding: 10px;
+        }
+
+        #myTable tr:nth-child(odd) {
+            background-color: bisque;
+        }
+
+        #myTable tr:hover {
+            background-color: cyan;
+        }
+
+        #myTable tr:active {
+            background-color: red;
+        }
+
+
     </style>
 </head>
 
 <body>
     
     <!-- Inline Style -->
-    <h1 style="font-size: 40px; color: #4d4d4d; font-family: Verdana, Geneva, Tahoma, sans-serif;">Hello World</h1>
+    <h1 
+        style="font-size: 40px; color: #4d4d4d; font-family: Verdana, Geneva, Tahoma, sans-serif;"
+    >
+        This is using inline style
+    </h1>
     
-    <p id="subText2" class="introText introText1">I am duplicate</p>
+    <p id="subText2" class="introText introText1">
+        Using id and class style
+    </p>
 
-    <p id="subText">I am duplicate too</p>
+    <p id="subText">Using id style</p>
 
-    <p>I will display &#128516;</p>
-    <table>
+    <p>This is global Html p tag style &#128516;</p>
+
+    <br />
+    
+    <table id="myTable">
         <tr>
-            <th>Company</th>
-            <th>Contact</th>
-            <th>Country</th>
-            <th>Country</th>
-            <th>Country</th>
+            <th>Session</th>
+            <th>Content</th>
+            <th>Date</th>
         </tr>
         <tr>
-            <td>Alfreds Futterkiste</td>
-            <td>Maria Anders</td>
-            <td>Germany</td>
-            <td>Maria Anders</td>
-            <td>Germany</td>
+            <td>1</td>
+            <td>HTML</td>
+            <td>15 Sep 2022</td>
         </tr>
         <tr>
-            <td>Centro comercial Moctezuma</td>
-            <td>Francisco Chang</td>
-            <td>Mexico</td>
-            <td>Maria Anders</td>
-            <td>Germany</td>
+            <td>2</td>
+            <td>CSS</td>
+            <td>19 Sep 2022</td>
         </tr>
         <tr>
-            <td>Centro comercial Moctezuma</td>
-            <td>Francisco Chang</td>
-            <td>Mexico</td>
-            <td>Maria Anders</td>
-            <td>Germany</td>
+            <td>3</td>
+            <td>Javascript</td>
+            <td>22 Sep 2022</td>
         </tr>
     </table>
     

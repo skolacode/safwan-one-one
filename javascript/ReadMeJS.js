@@ -67,7 +67,7 @@ const myFuncTwo = () => "hi"
 
 // what is parameters
 
-const myFirstFunc = (name, age) => {
+const myFirstFunc = (name = "", age) => {
   // ES5
   // console.log('my name is '+name)
   
@@ -78,5 +78,27 @@ const myFirstFunc = (name, age) => {
 myFirstFunc("Safwan", 28)
 myFirstFunc("Izz", 30)
 myFirstFunc("Anis", 29)
+myFirstFunc(29)
+
+// function with obj params
+const myFirstParamObjFunc = ({ name = "NULL", age }) => {
+  // ES5
+  // console.log('my name is '+name)
+  
+  // ES6 - backtick
+  console.log(`my name is ${name} i am ${age}`)
+}
+
+myFirstParamObjFunc({
+  age: "28",
+  name: "Rock"
+})
 
 
+// Requirement
+
+/**
+ * 1. create a function that accept 2 parameters
+ * 2. Working Place & Distance
+ * 3. Display the params in a sentence
+**/ 

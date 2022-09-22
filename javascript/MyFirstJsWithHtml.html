@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javsacript is Rock...</title>
+  </head>
+  <body>
+
+    <!-- We want to make this number changeable
+    1. Increate by 1 or decrease by 1
+    -->
+    <p id="counter">1</p>
+
+    <!-- Plus Button -->
+    <!-- Props / Attributes -->
+    <button onclick="getCounterElement()">Plus</button>
+
+    <!-- Minues Button -->
+    <button onclick="alert('I am clicked Minus')">Minus</button>
+  </body>
+
+  <script>
+      const getCounterElement = () => {
+        const counter = document.getElementById("counter")
+
+        document.getElementById("counter").setAttribute('value', "hi")
+
+        console.log('counter >> ', counter)
+      }
+  </script>
+</html>

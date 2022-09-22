@@ -15,25 +15,27 @@
 
     <!-- Plus Button -->
     <!-- Props / Attributes -->
-    <button onclick="getCounterElement()">Plus</button>
+    <button onclick="addMinusFunc('plus')">Plus</button>
 
     <!-- Minues Button -->
-    <button onclick="minusElement()">Minus</button>
+    <button onclick="addMinusFunc('minus')">Minus</button>
 
     <button onclick="addStyle()">Add Style</button>
   </body>
 
   <script>
-      const getCounterElement = () => {
-        let counter = document.getElementById("counter").innerText
 
-        document.getElementById("counter").innerText = Number(counter) + 1
-      }
+      const addMinusFunc = (operationType) => {
+        const counter = document.getElementById("counter")
 
-      const minusElement = () => {
-        let counter = document.getElementById("counter").innerText
+        const currentValue = Number(counter.innerText)
 
-        document.getElementById("counter").innerText = Number(counter) - 1
+        if(operationType === "minus") {
+          counter.innerText = currentValue - 1
+        }
+        else {
+          counter.innerText = currentValue + 1
+        }
       }
 
       const addStyle = () => {

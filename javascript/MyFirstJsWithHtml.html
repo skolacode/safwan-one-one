@@ -5,6 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javsacript is Rock...</title>
+
+    <style>
+      .makeThingBig {
+        font-size: 100px;
+        color: blue;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+
+      .addAnimation {
+        animation: test 5s linear infinite;
+      }
+
+      @keyframes test {
+        from {
+          margin-left: 100px;
+        }
+        to {
+          margin-left: 0px;
+        }
+      }
+    </style>
+
   </head>
   <body>
 
@@ -21,9 +43,15 @@
     <button onclick="addMinusFunc('minus')">Minus</button>
 
     <button onclick="addStyle()">Add Style</button>
+
+    <button onclick="doAnimation()">Add Animation Style</button>
   </body>
 
-  <script>
+  <!-- External Import -->
+  <script src="myJs.js"></script>
+
+  <!-- Internal Import -->
+  <!-- <script>
 
       const addMinusFunc = (operationType) => {
         const counter = document.getElementById("counter")
@@ -41,7 +69,23 @@
       const addStyle = () => {
         const style = document.getElementById("counter")
 
-        style.setAttribute("style", "font-size: 40px")
+        const className = style.getAttribute('class')
+
+        let appendClass = className+" makeThingBig"
+
+        style.setAttribute("class", appendClass)
       }
-  </script>
+
+      const doAnimation = () => {
+        const style = document.getElementById("counter")
+
+        const className = style.getAttribute('class')
+
+        let appendClass = className+" addAnimation"
+
+        console.log('class: ', className)    
+        
+        style.setAttribute("class", appendClass)
+      }
+  </script> -->
 </html>

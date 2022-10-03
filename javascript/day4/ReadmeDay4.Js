@@ -64,10 +64,17 @@ const result = words.filter(element => element > 10);
 console.log(result);
 
 // - Join
+const elements = ['Fire', 'Air', 'Water'];
+
+const afterJoin = elements.join()
+console.log(afterJoin);
+
+const separator = " -- "
+const afterJoinComma = elements.join(separator)
+console.log(afterJoinComma);
 
 // - Loop
 // -- For loop (forEach, map)
 // -- While loop
 // -- do while
 // -- Switch
-

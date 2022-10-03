@@ -13,13 +13,35 @@ console.log(array1[array1-length - 1])
 console.log(array1.at(-1))
 
 // - Sort - 
-// -- ES6
+// ES6
 console.log( array1.sort())
-console.log( array1.sort((a, b) => a-b) )
+
+// Inline function
+console.log('inline func >', array1.sort((a, b) => a-b) )
+
+// Call a function
+console.log('ES5 function >', array1.sort(sortMe) )
+function sortMe(a,b) {
+  return a-b
+}
+
+// ES6 - shorthand
+const sortMe6 = (a,b) => a-b
+console.log('ES6 - shorthand >', array1.sort(sortMe6) )
+
+
+// ES6 - longhand
+const sortMe6long = (a,b) => {
+  return a-b
+}
+console.log('ES6 - longhand > ', array1.sort(sortMe6long) )
+
+
 
 // - Find
 // - Filter
 // - Join
+
 // - Loop
 // -- For loop (forEach, map)
 // -- While loop

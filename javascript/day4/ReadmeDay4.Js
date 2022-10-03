@@ -39,7 +39,30 @@ console.log('ES6 - longhand > ', array1.sort(sortMe6long) )
 
 
 // - Find
+const findMe = (indexElement) => {
+  const testRules = indexElement - 1 
+  
+  if(testRules === 14) {
+    return indexElement
+  }
+}
+
+const found = array1.find(findMe);
+console.log('FIND >', found);
+
+const found2 = array1.find((element) => element > 10);
+console.log('FIND2 >', found2);
+
+
+
 // - Filter
+const words = [1,2,3,4,10,15,13,5,6];
+
+
+const result = words.filter(element => element > 10);
+
+console.log(result);
+
 // - Join
 
 // - Loop

@@ -45,6 +45,18 @@ const newArr = myArr2.map((el, index) =>
 console.log('is: ', newArr)
 
 
-// -- While loop
-// -- do while
+// -- While loop | condition dulu, baru buat
+// -- do while | buat dulu, baru condition
+let counter = 2
+
+while(counter < 4) {
+  ++counter
+  console.log("counter is : ", counter)
+}
+
+do {
+  ++counter
+  console.log("do counter is : ", counter)
+} while(counter < 5)
+
 // -- Switch

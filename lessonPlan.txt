@@ -6,7 +6,7 @@ Day 1
 2. useState - DONE
 3. Html inputs - DONE
 4. useEffect - DONE
-5. MUI - intro
+5. MUI - intro - DONE
 
 Day 2
 ==

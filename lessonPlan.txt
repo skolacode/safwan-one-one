@@ -1,0 +1,22 @@
+
+Day 1
+==
+1. Folder Structure
+2. useState
+3. Html inputs
+4. useEffect
+5. MUI - intro
+
+Day 2
+==
+1. Components
+2. Styles
+3. props
+4. routing
+5. MUI
+
+Day 3
+==
+1. useRef
+2. useReducer
+3. Complete the todo app

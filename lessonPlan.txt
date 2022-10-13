@@ -3,9 +3,9 @@ Day 1
 ==
 1. Folder Structure - DONE
     a. Export Methods - DONE
-2. useState 
-3. Html inputs
-4. useEffect
+2. useState - DONE
+3. Html inputs - DONE
+4. useEffect - DONE
 5. MUI - intro
 
 Day 2

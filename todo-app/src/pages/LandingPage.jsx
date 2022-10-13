@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useEffect } from 'react'
 
 export const LandingPage = () => {
 
@@ -14,12 +15,20 @@ export const LandingPage = () => {
   // You can't MUTATE variable
 
   const [firstName, setFirstName] = useState("-")
+  const [lastName, setLastName] = useState("-")
+
+  const getName = (evt) => setFirstName(evt.target.value)
+
+  useEffect(() => {
+    console.log("i run")
+    // Dependencies
+  },[lastName, firstName])
 
   return (
     <div>
       <h1>Nama saya ialah: {firstName}</h1>
 
-      <input type="text" onChange={ (evt) => setFirstName(evt.target.value) } />
+      <input type="text" onChange={getName} />
     </div>
   )
 }

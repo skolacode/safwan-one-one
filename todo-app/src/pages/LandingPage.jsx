@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useEffect } from 'react'
-import { MyCard } from '../components/MyCard'
+import {MyCard} from '../components/MyCard'
 
 export const LandingPage = () => {
 
@@ -16,14 +16,17 @@ export const LandingPage = () => {
   // You can't MUTATE variable
 
   const [firstName, setFirstName] = useState("-")
-  const [lastName, setLastName] = useState("-")
 
   const getName = (evt) => setFirstName(evt.target.value)
 
   useEffect(() => {
     console.log("i run")
     // Dependencies
-  },[lastName, firstName])
+  },[firstName])
+
+  const clickMe = () => {
+    alert('I am clicked')
+  }
 
   return (
     <div>
@@ -34,11 +37,11 @@ export const LandingPage = () => {
       {/* 
       1. Self closing jika tiada children, 
       2. jika ada children jagan self close */}
-      <MyCard>
+      <MyCard content="hi" clickMeFunc={clickMe}>
         <h1>I am inside a card</h1>
       </MyCard>
 
-      <MyCard />
+      <MyCard clickMeFunc={clickMe}/>
     </div>
   )
 }

@@ -14,9 +14,9 @@ React Day 2
     a. Re-usable - DONE
     b. always make it small and sometimes can be medium - DONE
 2. Styles
-    a. Module
-    b. Normal Css
-3. props
+    a. Module - DONE
+    b. Normal Css - DONE
+3. props - 
 4. routing
 5. MUI
 

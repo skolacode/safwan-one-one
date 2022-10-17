@@ -1,5 +1,5 @@
 
-Day 1
+React Day 1
 ==
 1. Folder Structure - DONE
     a. Export Methods - DONE
@@ -8,15 +8,15 @@ Day 1
 4. useEffect - DONE
 5. MUI - intro - DONE
 
-Day 2
+React Day 2
 ==
-1. Components
+1. Components 
 2. Styles
 3. props
 4. routing
 5. MUI
 
-Day 3
+React Day 3
 ==
 1. useRef
 2. useReducer

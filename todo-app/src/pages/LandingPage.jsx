@@ -37,11 +37,9 @@ export const LandingPage = () => {
       {/* 
       1. Self closing jika tiada children, 
       2. jika ada children jagan self close */}
-      <MyCard content="hi" clickMeFunc={clickMe}>
-        <h1>I am inside a card</h1>
-      </MyCard>
+      <MyCard description="I am happy" editFunc={clickMe} deleteFunc={clickMe}/>
 
-      <MyCard clickMeFunc={clickMe}/>
+      <MyCard description="this class is awesome" editFunc={clickMe} deleteFunc={clickMe} />
     </div>
   )
 }

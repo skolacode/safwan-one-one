@@ -1,26 +1,23 @@
 import React from 'react'
 import myCardStyle from '../styles/MyCard.module.css'
 
-import PropTypes from 'prop-types';
-
-// de-structure
-
-
-
 export const MyCard = (props) => {
 
-  const { children, content, clickMeFunc } = props
+  const { description, deleteFunc, editFunc, viewFunc } = props
 
   return (
     <div className={myCardStyle.container}>
-      <div>This is Card component</div>
-      <p onClick={clickMeFunc}>{content}</p>
-      {children}
+      <p>{description}</p>
+
+      <button onClick={viewFunc}>
+        View
+      </button>
+      <button style={{ marginLeft: 10 }} onClick={editFunc}>
+        Edit
+      </button>
+      <button style={{ marginLeft: 10 }} onClick={deleteFunc}>
+        Delete
+      </button>
     </div>
   )
-}
-
-MyCard.propTypes = {
-  content: PropTypes.string.isRequired,
-  isEditable: PropTypes.bool
 }

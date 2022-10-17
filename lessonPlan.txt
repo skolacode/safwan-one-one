@@ -16,7 +16,7 @@ React Day 2
 2. Styles
     a. Module - DONE
     b. Normal Css - DONE
-3. props - 
+3. props - DONE
 4. routing
 5. MUI
 

@@ -11,9 +11,11 @@ React Day 1
 React Day 2
 ==
 1. Components 
-    a. Re-usable
-    b. always make it small and sometimes can be medium
+    a. Re-usable - DONE
+    b. always make it small and sometimes can be medium - DONE
 2. Styles
+    a. Module
+    b. Normal Css
 3. props
 4. routing
 5. MUI

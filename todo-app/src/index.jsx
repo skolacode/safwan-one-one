@@ -4,11 +4,29 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 import { HomePage } from './pages/HomePage'
+import { AboutPage } from './pages/AboutPage';
+
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <HomePage />,
+  },
+  {
+    path: "/safwan",
+    element: <AboutPage />,
+  },
+]);
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <HomePage />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 

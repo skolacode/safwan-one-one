@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useEffect } from 'react'
+import { MyCard } from '../components/MyCard'
 
 export const LandingPage = () => {
 
@@ -29,6 +30,15 @@ export const LandingPage = () => {
       <h1>Nama saya ialah: {firstName}</h1>
 
       <input type="text" onChange={getName} />
+
+      {/* 
+      1. Self closing jika tiada children, 
+      2. jika ada children jagan self close */}
+      <MyCard>
+        <h1>I am inside a card</h1>
+      </MyCard>
+
+      <MyCard />
     </div>
   )
 }

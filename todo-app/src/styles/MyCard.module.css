@@ -4,4 +4,11 @@
   border: 1px solid #c2c2c2;
   margin: 10px;
   width: 500px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: center;
 }

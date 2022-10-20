@@ -81,7 +81,7 @@ export const LandingPage = () => {
   return (
     <div className={landingPageStyle.container}>
 
-      <div style={{marginTop: 30, marginBottom: 30}}>
+      <div style={{marginTop: 30, marginBottom: 30, width: 500 }}>
         
         <TextField 
           id="outlined-basic" 
@@ -90,7 +90,8 @@ export const LandingPage = () => {
           type="text" 
           value={todo} 
           size="normal"
-          onChange={(evt) => setTodo(evt.target.value)} 
+          onChange={(evt) => setTodo(evt.target.value)}
+          style={{ width: '81%' }}
         />
       
         <Button variant="contained" size="large" sx={{ marginLeft: 1, height: 53 }} onClick={onSave}>Save</Button>

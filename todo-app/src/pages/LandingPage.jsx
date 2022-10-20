@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { useEffect } from 'react'
 import {MyCard} from '../components/MyCard'
+import landingPageStyle from '../styles/LandingPage.module.css'
 
 export const LandingPage = () => {
 
@@ -76,9 +76,12 @@ export const LandingPage = () => {
 
 
   return (
-    <div>
-      <input type="text" value={todo} onChange={(evt) => setTodo(evt.target.value)} />
-      <button onClick={onSave}>Save</button>
+    <div className={landingPageStyle.container}>
+
+      <div style={{marginTop: 30}}>
+        <input type="text" value={todo} onChange={(evt) => setTodo(evt.target.value)} />
+        <button style={{ marginLeft: 10 }} onClick={onSave}>Save</button>
+      </div>
 
       {
         todoList.map((each, index) => (
@@ -86,12 +89,16 @@ export const LandingPage = () => {
         ))
       }
 
-
-      <h3>Done List</h3>
       {
-        doneTodoList.map((each, index) => (
-          <MyCard key={index} index={index} description={each} deleteFunc={deleteDoneTodo} doneFunc={doneTodo} />
-        ))
+        doneTodoList.length > 0 &&
+        <>
+          <h3>Done List</h3>
+          {
+            doneTodoList.map((each, index) => (
+              <MyCard key={index} index={index} description={each} deleteFunc={deleteDoneTodo} doneFunc={doneTodo} />
+            ))
+          }
+        </>
       }
 
       {/* 

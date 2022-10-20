@@ -8,7 +8,7 @@ export const MyCard = (props) => {
 
   return (
     <div className={myCardStyle.container}>
-      <p>{description}</p>
+      <p>{index+1} - {description}</p>
 
       <div className={myCardStyle.btnContainer}>
         <Button size="small" variant="contained" onClick={() => doneFunc(index)}>

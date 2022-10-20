@@ -15,31 +15,36 @@ export const LandingPage = () => {
   // x = 2
   // You can't MUTATE variable
 
-  const [firstName, setFirstName] = useState("-")
+  const [todo, setTodo] = useState('')
+  const [todoList, setTodoList] = useState([])
 
-  const getName = (evt) => setFirstName(evt.target.value)
+  const onSave = () => {
+    // spread operator
+    const cloneTodoList = [...todoList]
 
-  useEffect(() => {
-    console.log("i run")
-    // Dependencies
-  },[firstName])
+    cloneTodoList.push(todo)
 
-  const clickMe = () => {
-    alert('I am clicked')
+    setTodoList(cloneTodoList)
   }
+
 
   return (
     <div>
-      <h1>Nama saya ialah: {firstName}</h1>
+      <input type="text" value={todo} onChange={(evt) => setTodo(evt.target.value)} />
+      <button onClick={onSave}>Save</button>
 
-      <input type="text" onChange={getName} />
+      {
+        todoList.map((each, index) => (
+          <MyCard key={index} description={each} />
+        ))
+      }
 
       {/* 
       1. Self closing jika tiada children, 
       2. jika ada children jagan self close */}
-      <MyCard description="I am happy" editFunc={clickMe} deleteFunc={clickMe}/>
+      {/* <MyCard description="I am happy" editFunc={clickMe} deleteFunc={clickMe}/> */}
 
-      <MyCard description="this class is awesome" editFunc={clickMe} deleteFunc={clickMe} />
+      {/* <MyCard description="this class is awesome" editFunc={clickMe} deleteFunc={clickMe} /> */}
     </div>
   )
 }

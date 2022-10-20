@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 import {MyCard} from '../components/MyCard'
 import landingPageStyle from '../styles/LandingPage.module.css'
 
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+
 export const LandingPage = () => {
 
   /**
@@ -78,9 +81,19 @@ export const LandingPage = () => {
   return (
     <div className={landingPageStyle.container}>
 
-      <div style={{marginTop: 30}}>
-        <input type="text" value={todo} onChange={(evt) => setTodo(evt.target.value)} />
-        <button style={{ marginLeft: 10 }} onClick={onSave}>Save</button>
+      <div style={{marginTop: 30, marginBottom: 30}}>
+        
+        <TextField 
+          id="outlined-basic" 
+          label="Todo" 
+          variant="outlined" 
+          type="text" 
+          value={todo} 
+          size="normal"
+          onChange={(evt) => setTodo(evt.target.value)} 
+        />
+      
+        <Button variant="contained" size="large" sx={{ marginLeft: 1, height: 53 }} onClick={onSave}>Save</Button>
       </div>
 
       {

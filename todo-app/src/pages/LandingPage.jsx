@@ -17,6 +17,7 @@ export const LandingPage = () => {
 
   const [todo, setTodo] = useState('')
   const [todoList, setTodoList] = useState([])
+  const [doneTodoList, setDoneTodoList] = useState([])
 
   const onSave = () => {
 
@@ -43,6 +44,21 @@ export const LandingPage = () => {
     setTodoList(cloneTodoList)
   }
 
+  const doneTodo = (index) => {
+    console.log('index:', index)
+    
+    const doneTodo = todoList[index]
+    
+    // add into doneTodoList
+    const cloneDoneTodoList = [...doneTodoList]
+    cloneDoneTodoList.push(doneTodo)
+    setDoneTodoList(cloneDoneTodoList)
+    
+    // delete from original list
+    deleteTodo(index)
+
+  }
+
 
   return (
     <div>
@@ -51,7 +67,15 @@ export const LandingPage = () => {
 
       {
         todoList.map((each, index) => (
-          <MyCard key={index} index={index} description={each} deleteFunc={deleteTodo} />
+          <MyCard key={index} index={index} description={each} deleteFunc={deleteTodo} doneFunc={doneTodo} />
+        ))
+      }
+
+
+      <h3>Done List</h3>
+      {
+        doneTodoList.map((each, index) => (
+          <MyCard key={index} index={index} description={each} deleteFunc={deleteTodo} doneFunc={doneTodo} />
         ))
       }
 

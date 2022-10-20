@@ -12,7 +12,7 @@ export const MyCard = (props) => {
       <button onClick={() => doneFunc(index)}>
         Done
       </button>
-      <button style={{ marginLeft: 10 }} onClick={editFunc}>
+      <button style={{ marginLeft: 10 }} onClick={() => editFunc(index)}>
         Edit
       </button>
       <button style={{ marginLeft: 10 }} onClick={() => deleteFunc(index)}>

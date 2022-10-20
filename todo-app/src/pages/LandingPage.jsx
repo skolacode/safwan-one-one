@@ -67,6 +67,13 @@ export const LandingPage = () => {
     setDoneTodoList(cloneTodoList)
   }
 
+  const editTodo = (index) => {
+    // get the clicked value and set to todo variable
+    setTodo(todoList[index])
+    // delete from todo list
+    deleteTodo(index)
+  }
+
 
   return (
     <div>
@@ -75,7 +82,7 @@ export const LandingPage = () => {
 
       {
         todoList.map((each, index) => (
-          <MyCard key={index} index={index} description={each} deleteFunc={deleteTodo} doneFunc={doneTodo} />
+          <MyCard key={index} index={index} description={each} deleteFunc={deleteTodo} doneFunc={doneTodo} editFunc={editTodo} />
         ))
       }
 

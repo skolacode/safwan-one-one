@@ -56,7 +56,15 @@ export const LandingPage = () => {
     
     // delete from original list
     deleteTodo(index)
+  }
 
+  const deleteDoneTodo = (index) => {
+    console.log('get index: ', index)
+    const cloneTodoList = [...doneTodoList]
+    
+    cloneTodoList.splice(index, 1)
+
+    setDoneTodoList(cloneTodoList)
   }
 
 
@@ -75,7 +83,7 @@ export const LandingPage = () => {
       <h3>Done List</h3>
       {
         doneTodoList.map((each, index) => (
-          <MyCard key={index} index={index} description={each} deleteFunc={deleteTodo} doneFunc={doneTodo} />
+          <MyCard key={index} index={index} description={each} deleteFunc={deleteDoneTodo} doneFunc={doneTodo} />
         ))
       }
 

@@ -19,12 +19,19 @@ export const LandingPage = () => {
   const [todoList, setTodoList] = useState([])
 
   const onSave = () => {
+
+    if(todo === '') {
+      return 
+    }
+
     // spread operator
     const cloneTodoList = [...todoList]
 
     cloneTodoList.push(todo)
 
     setTodoList(cloneTodoList)
+
+    setTodo('')
   }
 
 

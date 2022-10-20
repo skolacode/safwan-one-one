@@ -24,7 +24,7 @@ export const LandingPage = () => {
       return 
     }
 
-    // spread operator
+    // using spread operator to deep clone
     const cloneTodoList = [...todoList]
 
     cloneTodoList.push(todo)
@@ -32,6 +32,15 @@ export const LandingPage = () => {
     setTodoList(cloneTodoList)
 
     setTodo('')
+  }
+
+  const deleteTodo = (index) => {
+    console.log('get index: ', index)
+    const cloneTodoList = [...todoList]
+    
+    cloneTodoList.splice(index, 1)
+
+    setTodoList(cloneTodoList)
   }
 
 
@@ -42,7 +51,7 @@ export const LandingPage = () => {
 
       {
         todoList.map((each, index) => (
-          <MyCard key={index} description={each} />
+          <MyCard key={index} index={index} description={each} deleteFunc={deleteTodo} />
         ))
       }
 

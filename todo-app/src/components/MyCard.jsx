@@ -3,19 +3,19 @@ import myCardStyle from '../styles/MyCard.module.css'
 
 export const MyCard = (props) => {
 
-  const { description, deleteFunc, editFunc, viewFunc } = props
+  const { description, deleteFunc, editFunc, viewFunc, index } = props
 
   return (
     <div className={myCardStyle.container}>
       <p>{description}</p>
 
       <button onClick={viewFunc}>
-        View
+        Done
       </button>
       <button style={{ marginLeft: 10 }} onClick={editFunc}>
         Edit
       </button>
-      <button style={{ marginLeft: 10 }} onClick={deleteFunc}>
+      <button style={{ marginLeft: 10 }} onClick={() => deleteFunc(index)}>
         Delete
       </button>
     </div>

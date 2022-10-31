@@ -9,11 +9,18 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 import { LandingPage } from './LandingPage';
 
+import homePageStyle from '../styles/HomePage.module.css'
+
 export const HomePage = () => {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+
+      <div className={homePageStyle.myNavBar}>
+        <p>Hellow</p>
+      </div>
+
+      <AppBar position="static" id={homePageStyle.navBar}>
         <Toolbar>
           <IconButton
             size="large"

@@ -6,10 +6,25 @@ import reportWebVitals from './reportWebVitals';
 import { HomePage } from './pages/HomePage'
 import { AboutPage } from './pages/AboutPage';
 
+import { createTheme, ThemeProvider } from '@mui/material/styles'
+import { grey } from '@mui/material/colors';
+
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+
+const myTheme = createTheme({
+  status: {
+    danger: '#c2c2c2',
+  },
+  palette: {
+    primary: {
+      main: grey[300]
+    }
+  }
+});
+
 
 const router = createBrowserRouter([
   {
@@ -26,7 +41,9 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ThemeProvider theme={myTheme}>
+      <RouterProvider router={router} />
+    </ThemeProvider>
   </React.StrictMode>
 );
 

@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react'
+import React, { useReducer, useRef } from 'react'
 import {MyCard} from '../components/MyCard'
 import landingPageStyle from '../styles/LandingPage.module.css'
 
@@ -9,6 +9,8 @@ import { landingPageReducer, landingPageState } from '../reducers/LandingPageRed
 export const LandingPage = () => {
 
   const [state, dispatch] = useReducer(landingPageReducer, landingPageState);
+
+  const todoValue = useRef(null)
 
   // state.todo = '' > after update using dispatch > 'no longer empty'
   // landingPageState.todo = ''
@@ -24,6 +26,13 @@ export const LandingPage = () => {
   // x = 2
   // You can't MUTATE variable
 
+  console.count('render me')
+
+  const saveTodo = () => {
+    dispatch({ type: 'SAVE', payload: todoValue.current.value})
+    todoValue.current.value = ''
+  }
+
   return (
     <div className={landingPageStyle.container}>
 
@@ -34,17 +43,16 @@ export const LandingPage = () => {
           label="Todo" 
           variant="outlined" 
           type="text" 
-          value={state.todo} 
           size="normal"
-          onChange={(evt) => dispatch({ type: 'TODO', payload: { todo: evt.target.value } })}
           style={{ width: '81%' }}
+          inputRef={todoValue}
         />
       
         <Button 
           variant="contained" 
           size="large" 
           sx={{ marginLeft: 1, height: 53 }} 
-          onClick={() => dispatch({ type: 'SAVE' })}
+          onClick={saveTodo}
         >
           Save
         </Button>

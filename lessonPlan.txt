@@ -22,8 +22,8 @@ React Day 2
 
 React Day 3
 ==
-1. useRef - NO
-2. useReducer - NO
+1. useRef - DONE
+2. useReducer - DONE
 3. Complete the todo app - DONE
 
 React Day 4 / Argon Dashboard Template

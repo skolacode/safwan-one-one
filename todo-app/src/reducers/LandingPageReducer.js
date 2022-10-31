@@ -1,12 +1,12 @@
-const onSave = (state) => {
+const onSave = (state, payload) => {
 
-  if(state.todo === '') {
+  if(payload === '') {
     return 
   }
 
   const cloneTodoList = [...state.todoList]
 
-  cloneTodoList.push(state.todo)
+  cloneTodoList.push(payload)
 
   return {
     ...state, // todoList: [], todo: '', completedTodoList: []
@@ -73,7 +73,7 @@ export const landingPageReducer = (state, action) => {
       }
     }
     case 'SAVE': {
-      return onSave(state)
+      return onSave(state, action.payload)
     }
     case 'DELETE_TODO': {
       return deleteTodo(state, action.payload.arrIndex)

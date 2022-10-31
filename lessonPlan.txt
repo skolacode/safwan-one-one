@@ -26,4 +26,10 @@ React Day 3
 2. useReducer - NO
 3. Complete the todo app - DONE
 
+React Day 4 / Argon Dashboard Template
+===
+1. Form
+2. Github Pages
+3. Argon Dashboard
+
 // advance version is REDUX

@@ -52,7 +52,12 @@ export const LandingPage = () => {
 
       {
         state.todoList.map((each, index) => (
-          <MyCard key={index} index={index} description={each} />
+          <MyCard 
+            key={index} 
+            index={index} 
+            description={each} 
+            dispatch={dispatch}
+          />
         ))
       }
 

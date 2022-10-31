@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 
 export const MyCard = (props) => {
 
-  const { description, deleteFunc, editFunc, index, doneFunc } = props
+  const { description, deleteFunc, editFunc, index, doneFunc, dispatch } = props
 
   return (
     <div className={myCardStyle.container}>
@@ -17,7 +17,12 @@ export const MyCard = (props) => {
         <Button size="small" variant="outlined" style={{ marginLeft: 10 }} onClick={() => editFunc(index)}>
           Edit
         </Button>
-        <Button size="small" color='error' style={{ marginLeft: 10 }} onClick={() => deleteFunc(index)}>
+        <Button 
+          size="small" 
+          color='error' 
+          style={{ marginLeft: 10 }} 
+          onClick={() => dispatch({ type: 'DELETE_TODO', payload: {arrIndex: index} })}
+        >
           Delete
         </Button>
       </div>

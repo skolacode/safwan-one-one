@@ -15,14 +15,17 @@ const onSave = (state) => {
   }
 }
 
-// const deleteTodo = (index) => {
-//   console.log('get index: ', index)
-//   const cloneTodoList = [...todoList]
+const deleteTodo = (state, index) => {
+  const {todoList} = state
+  const cloneTodoList = [...todoList]
   
-//   cloneTodoList.splice(index, 1)
+  cloneTodoList.splice(index, 1)
 
-//   setTodoList(cloneTodoList)
-// }
+  return {
+    ...state,
+    todoList: cloneTodoList,
+  }
+}
 
 // const doneTodo = (index) => {
 //   console.log('index:', index)
@@ -71,6 +74,9 @@ export const landingPageReducer = (state, action) => {
     }
     case 'SAVE': {
       return onSave(state)
+    }
+    case 'DELETE_TODO': {
+      return deleteTodo(state, action.payload.arrIndex)
     }
     default:
       return true;

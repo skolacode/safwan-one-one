@@ -15,11 +15,6 @@ export const HomePage = () => {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-
-      <div className={homePageStyle.myNavBar}>
-        <p>Hellow</p>
-      </div>
-
       <AppBar position="static" id={homePageStyle.navBar}>
         <Toolbar>
           <IconButton

@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/safwan-one-one/static/css/main.20c288d0.css",
-    "main.js": "/safwan-one-one/static/js/main.3de1b59d.js",
-    "static/js/787.2843ca88.chunk.js": "/safwan-one-one/static/js/787.2843ca88.chunk.js",
-    "index.html": "/safwan-one-one/index.html",
-    "main.20c288d0.css.map": "/safwan-one-one/static/css/main.20c288d0.css.map",
-    "main.3de1b59d.js.map": "/safwan-one-one/static/js/main.3de1b59d.js.map",
-    "787.2843ca88.chunk.js.map": "/safwan-one-one/static/js/787.2843ca88.chunk.js.map"
+    "main.css": "/static/css/main.20c288d0.css",
+    "main.js": "/static/js/main.89c51f3a.js",
+    "static/js/787.2843ca88.chunk.js": "/static/js/787.2843ca88.chunk.js",
+    "index.html": "/index.html",
+    "main.20c288d0.css.map": "/static/css/main.20c288d0.css.map",
+    "main.89c51f3a.js.map": "/static/js/main.89c51f3a.js.map",
+    "787.2843ca88.chunk.js.map": "/static/js/787.2843ca88.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.20c288d0.css",
-    "static/js/main.3de1b59d.js"
+    "static/js/main.89c51f3a.js"
   ]
 }

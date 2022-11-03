@@ -28,7 +28,7 @@ React Day 3
 
 React Day 4 / Argon Dashboard Template
 ===
-1. Form
+1. Form - DONE
 2. Github Pages
 3. Argon Dashboard
 

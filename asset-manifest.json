@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/safwan-one-one/static/css/main.20c288d0.css",
-    "main.js": "/safwan-one-one/static/js/main.58476af8.js",
+    "main.js": "/safwan-one-one/static/js/main.5a61db0f.js",
     "static/js/787.2843ca88.chunk.js": "/safwan-one-one/static/js/787.2843ca88.chunk.js",
     "index.html": "/safwan-one-one/index.html",
     "main.20c288d0.css.map": "/safwan-one-one/static/css/main.20c288d0.css.map",
-    "main.58476af8.js.map": "/safwan-one-one/static/js/main.58476af8.js.map",
+    "main.5a61db0f.js.map": "/safwan-one-one/static/js/main.5a61db0f.js.map",
     "787.2843ca88.chunk.js.map": "/safwan-one-one/static/js/787.2843ca88.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.20c288d0.css",
-    "static/js/main.58476af8.js"
+    "static/js/main.5a61db0f.js"
   ]
 }

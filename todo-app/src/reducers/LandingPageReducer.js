@@ -1,7 +1,7 @@
 const onSave = (state, payload) => {
-
+  
   if(payload === '') {
-    return 
+    return state
   }
 
   const cloneTodoList = [...state.todoList]

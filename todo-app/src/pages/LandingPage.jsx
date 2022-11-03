@@ -28,7 +28,10 @@ export const LandingPage = () => {
 
   console.count('render me')
 
-  const saveTodo = () => {
+  const saveTodo = (evt) => {
+
+    evt.preventDefault()
+
     dispatch({ type: 'SAVE', payload: todoValue.current.value})
     todoValue.current.value = ''
   }
@@ -38,24 +41,27 @@ export const LandingPage = () => {
 
       <div style={{marginTop: 30, marginBottom: 30, width: 500 }}>
         
-        <TextField 
-          id="outlined-basic" 
-          label="Todo" 
-          variant="outlined" 
-          type="text" 
-          size="normal"
-          style={{ width: '81%' }}
-          inputRef={todoValue}
-        />
-      
-        <Button 
-          variant="contained" 
-          size="large" 
-          sx={{ marginLeft: 1, height: 53 }} 
-          onClick={saveTodo}
-        >
-          Save
-        </Button>
+        <form onSubmit={saveTodo}>
+          <TextField 
+            id="outlined-basic" 
+            label="Todo" 
+            variant="outlined" 
+            type="text" 
+            size="normal"
+            style={{ width: '81%' }}
+            inputRef={todoValue}
+            required
+          />
+        
+          <Button 
+            variant="contained" 
+            size="large" 
+            sx={{ marginLeft: 1, height: 53 }} 
+            type="submit"
+          >
+            Save
+          </Button>
+        </form>
       </div>
 
       {
